@@ -1,0 +1,105 @@
+[
+  {
+    "title": "Getting Started with Blogging",
+    "excerpt": "Blogging is a great way to share your thoughts. Here's how to start your own blog...",
+    "content": "Blogging is an amazing journey! You can share stories, tutorials, or personal experiences. Start with a clean design, focus on quality content, and be consistent.",
+    "image": "blog1.jpg",
+    "category": "Lifestyle",
+    "featured": true
+  },
+  {
+    "title": "10 Tips for Better Productivity",
+    "excerpt": "Boost your efficiency with these simple but powerful productivity hacks...",
+    "content": [
+    " 1. Plan your day the night before 📝.",
+    " 2. Start with the hardest task first (eat the frog) 🐸.",
+    " 3. Use the Pomodoro technique ⏱️.",
+    " 4. Eliminate distractions (phone on silent) 📵.",
+    " 5. Break big tasks into smaller steps ✂️.",
+    " 6. Prioritize with the 80/20 rule (Pareto principle) 🎯.",
+    " 7. Take short breaks to refresh ☕.",
+    " 8. Keep your workspace clean and minimal 🖥️.",
+    " 9. Batch similar tasks together 📂.",
+    " 10. Review and reflect at the end of the day 🔄."
+  ],
+    "image": "blog2.jpg",
+    "category": "Productivity",
+    "featured": true
+  },
+  {
+    "title": "Why Learning to Code is Essential",
+    "excerpt": "Coding is no longer just for programmers. Here's why everyone should learn...",
+    "content": [
+    "1. 💡 Improves problem-solving skills.",
+    "2. 🧠 Builds logical thinking.",
+    "3. 🌍 Opens global career opportunities.",
+    "4. 🤖 Helps understand how technology works.",
+    "5. 🚀 Boosts creativity (build your own apps, websites, games).",
+    "6. 💼 Increases job security & demand.",
+    "7. 📈 Enhances productivity with automation.",
+    "8. 🔍 Improves analytical skills.",
+    "9. 💻 Encourages continuous learning.",
+    "10. 🌐 Empowers you to turn ideas into reality."
+],
+    "image": "blog3.jpg",
+    "category": "Tech",
+    "featured": true
+  },
+  {
+    "title": "Healthy Lifestyle Tips",
+    "excerpt": "Staying healthy is key to a happy life...",
+    "content": [
+    " 1. Eat balanced meals – include fruits, vegetables, proteins, and whole grains in your diet.",
+    " 2. Stay hydrated – drink enough water throughout the day to keep your body active.",
+    " 3. Exercise regularly – even 30 minutes of walking or stretching makes a big difference.",
+    " 4. Get proper sleep – aim for 7–8 hours daily to refresh your mind and body.",
+    " 5. Manage stress – practice meditation, deep breathing, or hobbies you enjoy.",
+    " 6. Limit junk food – cut down on sugary and fried items to stay fit.",
+    " 7. Stay consistent – small healthy habits daily are more powerful than sudden big changes."
+    ],
+    "image": "blog4.jpg",
+    "category": "Lifestyle"
+  },
+  {
+    "title": "Top 5 JavaScript Tricks",
+    "excerpt": "Master JavaScript with these handy tips...",
+    "content": [
+     " 1. Use const and let instead of var, const is for values that never change, while let is for re-assignable ones. This avoids scope issues and makes code cleaner.",
+     " 2. Arrow functions: Arrow functions ()=>{} are shorter and automatically bind this, making them great for callbacks and concise code.",
+     " 3. Template literals: Instead of 'Hello ' + name, use `Hello ${name}`. It’s easier to read and supports multi-line strings.",
+     " 4. Error handling with try...catch: Always wrap risky code in try...catch to prevent apps from crashing and to give meaningful error messages.",
+     " 5. Strict comparison ===: Use === instead of == to avoid type conversion surprises. It ensures both value and type are the same."
+    ],
+    "image": "blog5.jpg",
+    "category": "Tech"
+  },
+  {
+    "title": "Time Management Hacks",
+    "excerpt": "Save hours every week with these hacks...",
+    "content": [
+     " 1. Prioritize with the 80/20 rule – focus on tasks that give the most results.",
+     " 2. Use a to-do list – write down 3 important tasks daily and finish them first.",
+     " 3. Avoid multitasking – do one task at a time for better efficiency.",
+     " 4. Set time blocks – work in focused 25–50 minute sessions, then take a short break.",
+     " 5. Limit distractions – keep your phone on silent or use apps that block social media.",
+     " 6. Plan tomorrow today – spend 5 minutes at night preparing for the next day.",
+     " 7. Use deadlines – even self-made ones boost focus and productivity."
+    ],
+    "image": "blog6.jpg",
+    "category": "Productivity"
+  },
+  {
+    "title": "Minimalist Lifestyle",
+    "excerpt": "Less stuff, more happiness...",
+    "content": "Minimalism focuses on experiences over possessions for peace of mind.",
+    "image": "blog7.jpg",
+    "category": "Lifestyle"
+  },
+  {
+  "title": "Stay Consistent, Not Perfect",
+  "excerpt": "Success doesn’t come from doing everything perfectly in one day. It comes from small, consistent steps repeated daily. Focus on progress, not perfection.",
+  "content": "Consistency is far more powerful than chasing perfection. Many people wait for the “right time” or try to get everything flawless before starting. The truth is, progress happens when you show up daily, even in small ways. Whether it’s studying, exercising, or building a new habit, the key is sticking with it. Perfection can overwhelm and stop you from moving forward, but consistency builds momentum. Over time, those small actions compound into big results. So don’t worry about being perfect—just keep moving forward, one step at a time.",
+  "image": "blog8.jpg",
+  "category": "Motivation"
+  }
+]

@@ -1,0 +1,157 @@
+/* General */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8f9fa;
+  color: #212529;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #121212;
+  color: #e4e4e4;
+}
+body.dark .navbar {
+  background: #1f1f1f99 !important;
+}
+body.dark .card {
+  background: #1f1f1f;
+  color: #e4e4e4;
+  box-shadow: 0 4px 15px rgba(255,255,255,0.1);
+}
+body.dark footer {
+  background: #1f1f1f !important;
+}
+body.dark .btn-outline-primary {
+  border-color: #e4e4e4;
+  color: #e4e4e4;
+}
+body.dark .btn-outline-primary.active {
+  background: #0d6efd;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://source.unsplash.com/1600x600/?blog,writing') no-repeat center center/cover;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.65);
+  padding: 2rem 3rem;
+  border-radius: 12px;
+}
+.hero h1 {
+  font-size: 2.8rem;
+}
+.hero p {
+  font-size: 1.3rem;
+}
+
+/* Blog Cards */
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Category Buttons */
+#categories .btn {
+  margin: 5px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+#categories .btn.active {
+  background-color: #0d6efd;
+  color: white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* Pagination */
+#pagination .page-item.active .page-link {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+/* Featured Post */
+.featured-post {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.featured-post:hover {
+  transform: scale(1.02);
+}
+.featured-post img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.featured-post .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: white;
+}
+.featured-post h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.featured-post p {
+  font-size: 1rem;
+}
+
+/* Dark mode for Featured */
+body.dark .featured-post {
+  box-shadow: 0 5px 20px rgba(255,255,255,0.1);
+}
+
+/* Featured Carousel */
+.carousel-item {
+  position: relative;
+}
+.carousel-item img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 1.5rem;
+  left: 10%;
+  right: 10%;
+  bottom: 30px;
+}
+.carousel-caption h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.carousel-caption p {
+  font-size: 1rem;
+}
+
+/* Dark Mode Fix */
+body.dark .carousel-caption {
+  background: rgba(30, 30, 30, 0.7);
+}
