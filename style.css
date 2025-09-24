@@ -7,6 +7,23 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
+/* Logo Text Style */
+.logo-text {
+  font-family: "Poppins", sans-serif; /* modern clean font */
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, #ff6a00, #ee0979); /* gradient text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+}
+
+.logo-text:hover {
+  transform: scale(1.1); /* little zoom on hover */
+}
+
 /* Dark Mode */
 body.dark {
   background: #121212;
@@ -34,23 +51,57 @@ body.dark .btn-outline-primary.active {
 
 /* Hero Section */
 .hero {
-  background: url('https://source.unsplash.com/1600x600/?blog,writing') no-repeat center center/cover;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
+  height: 60vh;
+  background: url('blog0.jpg') center/cover no-repeat;
 }
+
 .hero .overlay {
-  background: rgba(0, 0, 0, 0.65);
-  padding: 2rem 3rem;
-  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .hero h1 {
   font-size: 2.8rem;
 }
 .hero p {
   font-size: 1.3rem;
+}
+
+/* Hero Logo Style */
+.hero-logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInDown 1.2s ease-in-out;
+}
+
+/* Subtitle Style */
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Simple Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Blog Cards */
@@ -154,4 +205,33 @@ body.dark .featured-post {
 /* Dark Mode Fix */
 body.dark .carousel-caption {
   background: rgba(30, 30, 30, 0.7);
+}
+
+/* Footer Icons */
+.footer-icon {
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.footer-icon:hover {
+  color: #ff6a00;
+  transform: scale(1.2);
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: none;
+  width: 45px;
+  height: 45px;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.like-btn {
+  transition: transform 0.2s ease;
+}
+.like-btn:hover {
+  transform: scale(1.2);
 }
