@@ -1,7 +1,7 @@
 [
   {
     "title": "Getting Started with Blogging",
-    "excerpt": "Blogging is a great way to share your thoughts. Here's how to start your own blog...",
+    "description": "Blogging is a great way to share your thoughts. Here's how to start your own blog...",
     "content": "Blogging is an amazing journey! You can share stories, tutorials, or personal experiences. Start with a clean design, focus on quality content, and be consistent.",
     "image": "blog1.jpg",
     "category": "Lifestyle",
@@ -9,7 +9,7 @@
   },
   {
     "title": "10 Tips for Better Productivity",
-    "excerpt": "Boost your efficiency with these simple but powerful productivity hacks...",
+    "description": "Boost your efficiency with these simple but powerful productivity hacks...",
     "content": [
     " 1. Plan your day the night before 📝.",
     " 2. Start with the hardest task first (eat the frog) 🐸.",
@@ -28,7 +28,7 @@
   },
   {
     "title": "Why Learning to Code is Essential",
-    "excerpt": "Coding is no longer just for programmers. Here's why everyone should learn...",
+    "description": "Coding is no longer just for programmers. Here's why everyone should learn...",
     "content": [
     "1. 💡 Improves problem-solving skills.",
     "2. 🧠 Builds logical thinking.",
@@ -47,7 +47,7 @@
   },
   {
     "title": "Healthy Lifestyle Tips",
-    "excerpt": "Staying healthy is key to a happy life...",
+    "description": "Staying healthy is key to a happy life...",
     "content": [
     " 1. Eat balanced meals – include fruits, vegetables, proteins, and whole grains in your diet.",
     " 2. Stay hydrated – drink enough water throughout the day to keep your body active.",
@@ -62,7 +62,7 @@
   },
   {
     "title": "Top 5 JavaScript Tricks",
-    "excerpt": "Master JavaScript with these handy tips...",
+    "description": "Master JavaScript with these handy tips...",
     "content": [
      " 1. Use const and let instead of var, const is for values that never change, while let is for re-assignable ones. This avoids scope issues and makes code cleaner.",
      " 2. Arrow functions: Arrow functions ()=>{} are shorter and automatically bind this, making them great for callbacks and concise code.",
@@ -75,7 +75,7 @@
   },
   {
     "title": "Time Management Hacks",
-    "excerpt": "Save hours every week with these hacks...",
+    "description": "Save hours every week with these hacks...",
     "content": [
      " 1. Prioritize with the 80/20 rule – focus on tasks that give the most results.",
      " 2. Use a to-do list – write down 3 important tasks daily and finish them first.",
@@ -90,14 +90,14 @@
   },
   {
     "title": "Minimalist Lifestyle",
-    "excerpt": "Less stuff, more happiness...",
+    "description": "Less stuff, more happiness...",
     "content": "Minimalism focuses on experiences over possessions for peace of mind.",
     "image": "blog7.jpg",
     "category": "Lifestyle"
   },
   {
   "title": "Stay Consistent, Not Perfect",
-  "excerpt": "Success doesn’t come from doing everything perfectly in one day. It comes from small, consistent steps repeated daily. Focus on progress, not perfection.",
+  "description": "Success doesn’t come from doing everything perfectly in one day. It comes from small, consistent steps repeated daily. Focus on progress, not perfection.",
   "content": "Consistency is far more powerful than chasing perfection. Many people wait for the “right time” or try to get everything flawless before starting. The truth is, progress happens when you show up daily, even in small ways. Whether it’s studying, exercising, or building a new habit, the key is sticking with it. Perfection can overwhelm and stop you from moving forward, but consistency builds momentum. Over time, those small actions compound into big results. So don’t worry about being perfect—just keep moving forward, one step at a time.",
   "image": "blog8.jpg",
   "category": "Motivation"
