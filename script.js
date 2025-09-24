@@ -31,9 +31,9 @@ function renderFeaturedPost(posts) {
     container.innerHTML += `
       <div class="carousel-item ${index === 0 ? "active" : ""}">
         <img src="${post.image}" alt="${post.title}">
-        <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-caption d-block bg-dark bg-opacity-50 rounded p-2">
           <h3>${post.title}</h3>
-          <p>${post.excerpt}</p>
+          <p>${post.description}</p>
           <button class="btn btn-primary" onclick="openPost(${allPosts.indexOf(post)})">Read More</button>
         </div>
       </div>
@@ -127,7 +127,7 @@ function getFilteredPosts() {
   let query = document.getElementById("searchBar").value.toLowerCase();
   return allPosts.filter(post =>
     (currentCategory === "All" || post.category === currentCategory) &&
-    (post.title.toLowerCase().includes(query) || post.excerpt.toLowerCase().includes(query))
+    (post.title.toLowerCase().includes(query) || post.description.toLowerCase().includes(query))
   );
 }
 
@@ -255,3 +255,4 @@ Object.keys(localStorage).forEach(key => {
     localStorage.removeItem(key);
   }
 });
+
