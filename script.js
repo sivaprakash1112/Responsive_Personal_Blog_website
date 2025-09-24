@@ -41,39 +41,59 @@ function renderFeaturedPost(posts) {
   });
 }
 
+// Load likes from localStorage
+    function getLikes(postId) {
+      const likes = JSON.parse(localStorage.getItem("likes")) || {};
+      return likes[postId] || 0;
+    }
+
+    // Check if post is liked
+    function isLiked(postId) {
+      const likedPosts = JSON.parse(localStorage.getItem("likedPosts")) || {};
+      return !!likedPosts[postId];
+    }
+
 // Render posts with pagination
+// Generate blog cards
 function renderPosts(posts) {
-  let postContainer = document.getElementById("posts");
-  postContainer.innerHTML = "";
+  const postsContainer = document.getElementById("posts");
+  postsContainer.innerHTML = "";
 
-  if (posts.length === 0) {
-    postContainer.innerHTML = `<p class="text-center text-muted">No posts found.</p>`;
-    document.getElementById("pagination").innerHTML = "";
-    return;
-  }
+  posts.forEach((post, index) => {
+    // Read likes + liked state
+    let likes = parseInt(localStorage.getItem(`likes_${index}`)) || 0;
+    let liked = localStorage.getItem(`liked_${index}`) === "true";
 
-  let start = (currentPage - 1) * postsPerPage;
-  let end = start + postsPerPage;
-  let paginatedPosts = posts.slice(start, end);
-
-  paginatedPosts.forEach((post, index) => {
-    let globalIndex = allPosts.indexOf(post);
-    let postHTML = `
+    postsContainer.innerHTML += `
       <div class="col-md-4">
-        <div class="card h-100">
+        <div class="card h-100 shadow-sm">
           <img src="${post.image}" class="card-img-top" alt="${post.title}">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">${post.title}</h5>
-            <p class="card-text">${post.excerpt}</p>
-            <button class="btn btn-primary mt-auto" onclick="openPost(${globalIndex})">Read More</button>
+            <p class="card-text">${post.description}</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <button class="btn btn-sm btn-outline-primary" onclick="openPost(${index})">Read More</button>
+              <button 
+                id="like-btn-${index}" 
+                class="btn btn-sm ${liked ? "btn-danger" : "btn-outline-danger"}">
+                ❤️ <span id="like-count-${index}">${likes}</span>
+              </button>
+              <button class="btn btn-sm btn-outline-success" onclick="sharePost(${index})">🔗 Share</button>
+            </div>
           </div>
         </div>
-      </div>`;
-    postContainer.innerHTML += postHTML;
+      </div>
+    `;
   });
 
-  renderPagination(posts.length);
+  // Attach like listeners AFTER cards are rendered
+  posts.forEach((_, index) => {
+    const btn = document.getElementById(`like-btn-${index}`);
+    btn.addEventListener("click", () => toggleLike(index, btn));
+  });
 }
+
+  
 
 // Render categories
 function renderCategories(posts) {
@@ -167,5 +187,71 @@ themeToggle.addEventListener("click", () => {
   } else {
     themeToggle.textContent = "🌙";
     localStorage.setItem("theme", "light");
+  }
+});
+
+// Back to Top Button
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTop.style.display = "block";
+  } else {
+    backToTop.style.display = "none";
+  }
+});
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+
+
+
+// Share Post Function
+function sharePost(index) {
+  const post = allPosts[index];
+  const shareData = {
+    title: post.title,
+    text: post.description,
+    url: window.location.href
+  };
+
+  if (navigator.share) {
+    navigator.share(shareData).catch(err => console.log("Share failed:", err));
+  } else {
+    // Fallback: copy link to clipboard
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      alert("Link copied to clipboard!");
+    });
+  }
+}
+
+function toggleLike(index, btn) {
+  let likes = parseInt(localStorage.getItem(`likes_${index}`)) || 0;
+  let liked = localStorage.getItem(`liked_${index}`) === "true";
+
+  if (!liked) {
+    // Like it
+    likes++;
+    localStorage.setItem(`likes_${index}`, likes);
+    localStorage.setItem(`liked_${index}`, "true");
+    btn.classList.remove("btn-outline-danger");
+    btn.classList.add("btn-danger");
+  } else {
+    // Unlike it
+    likes = Math.max(0, likes - 1);
+    localStorage.setItem(`likes_${index}`, likes);
+    localStorage.setItem(`liked_${index}`, "false");
+    btn.classList.remove("btn-danger");
+    btn.classList.add("btn-outline-danger");
+  }
+
+  document.getElementById(`like-count-${index}`).textContent = likes;
+}
+
+Object.keys(localStorage).forEach(key => {
+  if (key.startsWith("likes_") || key.startsWith("liked_")) {
+    localStorage.removeItem(key);
   }
 });
