@@ -6,8 +6,9 @@
   <title>Contact - My Blog</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome for social icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  
 </head>
 <body>
   <!-- Navbar -->
@@ -20,8 +21,8 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -29,40 +30,34 @@
 
   <!-- Contact Section -->
   <section class="container py-5">
-  <h2 class="text-center mb-4">Contact Me</h2>
-  <div class="row g-4">
-    
-    <!-- Contact Form -->
-    <div class="col-lg-6">
-      <form id="contactForm" class="p-4 shadow rounded bg-light">
-        <div class="mb-3">
-          <label class="form-label">Name</label>
-          <input type="text" class="form-control" required>
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Email</label>
-          <input type="email" class="form-control" required>
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Message</label>
-          <textarea class="form-control" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary w-100">Send Message</button>
-      </form>
-    </div>
-
-       <!-- Map -->
-    <div class="col-lg-6">
-      <div class="ratio ratio-4x3">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945877.9148329934!2d73.67836452594398!3d15.02617515771808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a4c37bf488f%3A0x41f1d28cd1757cd5!2sKarnataka!5e0!3m2!1sen!2sin!4v1758692953482!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <h2 class=" mb-4">Contact Me</h2>
+    <div class="row">
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <form id="contactForm" action="https://formspree.io/f/mrbybqer" method="POST">
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" name="name" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea name="message" rows="5" class="form-control" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
       </div>
 
-        <!-- Social Icons -->
-        <div class="text-center">
-          <a href="https://twitter.com/" target="_blank" class="btn btn-outline-primary me-2"><i class="fab fa-twitter"></i></a>
-          <a href="https://github.com/sivaprakash1112/" target="_blank" class="btn btn-outline-dark me-2"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/sivaprakash-a-156201244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app/" target="_blank" class="btn btn-outline-info"><i class="fab fa-linkedin"></i></a>
+      <!-- Google Map + Social -->
+      <div class="col-md-6">
+        <!-- Map -->
+        <div class="mb-4">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945877.9148329934!2d73.67836452594398!3d15.02617515771808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35a4c37bf488f%3A0x41f1d28cd1757cd5!2sKarnataka!5e0!3m2!1sen!2sin!4v1758692953482!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+
       </div>
     </div>
   </section>
@@ -78,9 +73,24 @@
   </div>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2025 My Blog</p>
-  </footer>
+<footer class="bg-dark text-white text-center py-4 position-relative">
+  <div class="container">
+    <p class="mb-2">&copy; 2025 My Blog</p>
+
+    <!-- Social Icons -->
+    <div class="mb-3">
+      <a href="https://github.com/" target="_blank" class="text-white me-3 footer-icon"><i class="bi bi-github"></i></a>
+      <a href="https://linkedin.com/" target="_blank" class="text-white me-3 footer-icon"><i class="bi bi-linkedin"></i></a>
+      <a href="https://twitter.com/" target="_blank" class="text-white me-3 footer-icon"><i class="bi bi-twitter"></i></a>
+      <a href="mailto:youremail@example.com" class="text-white footer-icon"><i class="bi bi-envelope-fill"></i></a>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="btn btn-primary rounded-circle">
+    ⬆
+  </button>
+</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
