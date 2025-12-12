@@ -32,3 +32,7 @@ A modern, clean, mobile-responsive blog website built using **HTML, CSS, and Jav
 ---
 
 ## 📁 Folder Structure  
+Responsive_Personal_Blog_website/
+├── index.html
+├── style.css
+└── script.js
